@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaz | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <!-- ======= NAVBAR ======= -->
+    <nav id="navbar">
+      <div class="nav-inner">
+
+        <a href="#home" class="nav-logo">Kaz.</a>
+
+        <!-- Hamburger button for mobile -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+
+    <!-- ======= HERO ======= -->
+    <header id="home" class="hero">
+      <div class="hero-content">
+
+        <p class="hero-location">
+          <i class="fa-solid fa-location-dot"></i> Queens, NYC
+        </p>
+
+        <h1>
+          Hi, I'm Kaz.<br />
+          <span class="hero-sub-heading">CS student. Builder. Queens native.</span>
+        </h1>
+
+        <p class="hero-bio">
+          I went from selling cars to writing code — and I haven't looked back.
+          I'm a Computer Science student at Queens College building real things
+          in AI, cybersecurity, and systems programming.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-dark">See My Work</a>
+          <a href="#contact" class="btn btn-outline">Say Hello</a>
+        </div>
+
+      </div>
+
+      <!-- Hero photo -->
+      <div class="hero-photo">
+        <img src="photo.jpeg" alt="Kaz standing in front of a large pop art mural at a museum" class="hero-img" />
+      </div>
+
+    </header>
+
+    <main>
+
+    <!-- ======= ABOUT ======= -->
+    <section id="about" class="section">
+      <div class="container">
+
+        <span class="label">About Me</span>
+        <h2>A different kind of<br />CS student.</h2>
+
+        <div class="about-grid">
+
+          <div class="about-text">
+            <p>
+              I grew up in Woodside, Queens — the kind of neighborhood that teaches
+              you to figure things out. Before I ever touched a terminal, I spent
+              over a decade in the automotive industry, working my way from Sales
+              Consultant all the way to Finance Manager and Assistant General Manager.
+            </p>
+            <p>
+              That career gave me something most CS students don't have: real
+              experience solving problems under pressure, communicating with every
+              kind of person, and understanding that technology only matters if it
+              works for real people.
+            </p>
+            <p>
+              Now I'm channeling all of that into software — building AI tools,
+              studying cybersecurity, and teaching the next generation of developers
+              as a Teaching Assistant at LaGuardia Community College.
+            </p>
+          </div>
+
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <div>
+                <strong>Queens College, CUNY</strong>
+                <span>BS Computer Science — graduating 2026</span>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <i class="fa-solid fa-microchip"></i>
+              <div>
+                <strong>AI Systems Engineering Fellow</strong>
+                <span>Justice Through Code × Columbia University</span>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <i class="fa-solid fa-plane"></i>
+              <div>
+                <strong>AFRL Intern</strong>
+                <span>Air Force Research Lab — built a locally hosted LLM chatbot</span>
+              </div>
+            </div>
+            <div class="highlight-card">
+              <i class="fa-solid fa-chalkboard-user"></i>
+              <div>
+                <strong>Teaching Assistant</strong>
+                <span>LaGuardia Community College</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======= EXPERIENCE ======= -->
+    <section id="experience" class="section section-tinted">
+      <div class="container">
+
+        <span class="label">Experience</span>
+        <h2>Where I've been.</h2>
+
+        <!-- Timeline -->
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024</span>
+              <h3>AI Systems Engineering Fellow</h3>
+              <p class="timeline-org">Justice Through Code × Columbia University</p>
+              <p>Selected for a competitive AI/ML fellowship. Built and deployed
+              LLM-powered applications and studied responsible AI systems engineering.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024</span>
+              <h3>Research Intern</h3>
+              <p class="timeline-org">Air Force Research Lab (AFRL)</p>
+              <p>Built a fully locally-hosted AI chatbot using LLaMA, RAG, and Flask.
+              Zero data left the machine — designed for secure, offline use.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2023 – Present</span>
+              <h3>Teaching Assistant</h3>
+              <p class="timeline-org">LaGuardia Community College</p>
+              <p>Support students in programming fundamentals, Git/GitHub, and
+              JavaScript. Created tutorial documents used across the cohort.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2010 – 2022</span>
+              <h3>Finance Manager → Assistant General Manager</h3>
+              <p class="timeline-org">Great Neck Car Buyers & Sellers</p>
+              <p>Spent over a decade in automotive — starting as a Sales Consultant
+              and growing into Finance Manager and AGM. Managed deals, teams,
+              and customer relationships at scale.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======= PROJECTS ======= -->
+    <section id="projects" class="section">
+      <div class="container">
+
+        <span class="label">My Work</span>
+        <h2>Things I've built.</h2>
+
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-tag">AI / NLP</span>
+              <div class="project-icons">
+                <a href="#" title="GitHub" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3>LLaMA RAG Chatbot</h3>
+            <p>Locally hosted AI chatbot using LLaMA, Retrieval-Augmented Generation,
+            and Flask. Built for the Air Force Research Lab — no internet required.</p>
+            <div class="project-stack">
+              <span>Python</span><span>LLaMA</span><span>Flask</span><span>RAG</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-tag">Computer Vision</span>
+              <div class="project-icons">
+                <a href="#" title="GitHub" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3>YOLOv8 Car Parts Detector</h3>
+            <p>Trained YOLOv8 to detect and classify car parts in real time.
+            Combined a decade of automotive knowledge with machine learning.</p>
+            <div class="project-stack">
+              <span>Python</span><span>YOLOv8</span><span>OpenCV</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-tag">Systems</span>
+              <div class="project-icons">
+                <a href="#" title="GitHub" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3>Unix Shell in C</h3>
+            <p>Built a working Unix shell from scratch in C — pipes, I/O redirection,
+            background processes, and built-in commands. Ran on Linux via UTM.</p>
+            <div class="project-stack">
+              <span>C</span><span>Linux</span><span>fork()</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-tag">Networking</span>
+              <div class="project-icons">
+                <a href="#" title="GitHub" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3>HTTP Download Accelerator</h3>
+            <p>Multi-threaded file downloader using raw TCP sockets — splits files
+            into chunks, downloads in parallel, reassembles. No libraries.</p>
+            <div class="project-stack">
+              <span>Python</span><span>TCP</span><span>Multithreading</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-tag">Machine Learning</span>
+              <div class="project-icons">
+                <a href="#" title="GitHub" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3>Digit Classifier (HOG + SVM)</h3>
+            <p>Digit recognition on MNIST using HOG feature extraction and an SVM
+            classifier. Wrote a NeurIPS-format research paper on the results.</p>
+            <div class="project-stack">
+              <span>MATLAB</span><span>HOG</span><span>SVM</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-tag">Data</span>
+              <div class="project-icons">
+                <a href="#" title="View" aria-label="View project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <h3>Food Insecurity Dashboard</h3>
+            <p>Interactive Tableau dashboard mapping food insecurity across NYC
+            neighborhoods — built to support public policy advocacy.</p>
+            <div class="project-stack">
+              <span>Tableau</span><span>Data Viz</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======= HOBBIES ======= -->
+    <section id="hobbies" class="section section-tinted">
+      <div class="container">
+
+        <span class="label">Outside of Code</span>
+        <h2>A little about me.</h2>
+
+        <p class="hobbies-intro">
+          I'm not just a developer — I'm a person first. Art, sports, film,
+          street culture. Here's what's on my mind when the laptop is closed.
+        </p>
+
+        <!-- Image gallery grid -->
+        <div class="gallery">
+
+          <!-- Big feature card — museum photo -->
+          <div class="gallery-card gallery-card--wide">
+            <img src="photo.jpeg" alt="Kaz at a museum standing in front of a large pop art mural" />
+            <div class="gallery-caption">
+              <span class="gallery-tag">Art & Culture</span>
+              <p>Museums, street art, things that make you stop and think.</p>
+            </div>
+          </div>
+
+          <!-- Banksy -->
+          <div class="gallery-card">
+            <img src="banksy.jpeg" alt="Banksy street art showing a man with umbrella blocking colored rain while a child embraces it" />
+            <div class="gallery-caption">
+              <span class="gallery-tag">Street Art</span>
+              <p>Banksy gets it. Art that lives on walls, not in galleries.</p>
+            </div>
+          </div>
+
+          <!-- Kubrick -->
+          <div class="gallery-card">
+            <img src="kubrick.jpeg" alt="Illustration of Stanley Kubrick surrounded by characters from his films" />
+            <div class="gallery-caption">
+              <span class="gallery-tag">Film</span>
+              <p>Kubrick, Nolan — directors who treat the audience like they're smart.</p>
+            </div>
+          </div>
+
+          <!-- Khabib vs McGregor -->
+          <div class="gallery-card">
+            <img src="khabib.webp" alt="Khabib Nurmagomedov vs Conor McGregor in the UFC octagon" />
+            <div class="gallery-caption">
+              <span class="gallery-tag">Combat Sports</span>
+              <p>One of the greatest fights ever made. Discipline over hype.</p>
+            </div>
+          </div>
+
+          <!-- Zidane headbutt -->
+          <div class="gallery-card">
+            <img src="zidane.jpeg" alt="Zinedine Zidane headbutting Marco Materazzi in the 2006 World Cup Final" />
+            <div class="gallery-caption">
+              <span class="gallery-tag">Football</span>
+              <p>Zidane. The most iconic moment in World Cup history. No notes.</p>
+            </div>
+          </div>
+
+          <!-- Eat the Rich -->
+          <div class="gallery-card gallery-card--wide">
+            <img src="eattherich.png" alt="Street mural showing wealth inequality next to a soup kitchen with a man holding a Feed the Poor sign" />
+            <div class="gallery-caption">
+              <span class="gallery-tag">Social Consciousness</span>
+              <p>I care about where the world is going. Art that says what people are thinking.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======= CONTACT ======= -->
+    <section id="contact" class="section">
+      <div class="container contact-container">
+
+        <span class="label">Get In Touch</span>
+        <h2>Let's talk.</h2>
+
+        <p class="contact-intro">
+          Open to internships, entry-level roles, and interesting collaborations.
+          Send me a message and I'll get back to you.
+        </p>
+
+        <form id="contact-form" class="contact-form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" />
+              <span class="error-msg" id="name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@email.com" />
+              <span class="error-msg" id="email-error"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity..."></textarea>
+            <span class="error-msg" id="message-error"></span>
+          </div>
+
+          <button type="submit" class="btn btn-dark" id="submit-btn">
+            Send Message <i class="fa-solid fa-paper-plane"></i>
+          </button>
+
+          <p class="form-success" id="form-success"></p>
+
+        </form>
+
+        <div class="contact-social">
+          <a href="https://github.com/" target="_blank">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://linkedin.com/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    </main>
+
+    <!-- ======= FOOTER ======= -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© 2026 Kaz. Made in Queens. 🗽</p>
+        <a href="#home" class="back-top" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
