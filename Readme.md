@@ -45,7 +45,7 @@ Python, C, JavaScript, HTML/CSS, Machine Learning (YOLOv8), Computer Vision, RAG
 - Food Insecurity Dashboard — Tableau data visualization for public advocacy
 
 **6. Short professional bio:**
-I'm a Computer Science student at Queens College (CUNY) about one year from finishing my BS. Before tech, I spent over a decade in the automotive industry — working my way from Sales Consultant to Finance Manager and Assistant General Manager. That career gave me something most CS students don't have: real experience solving problems under pressure and communicating across every kind of audience. I've since interned at the Air Force Research Lab, completed an AI Systems Engineering fellowship at Columbia University, and work as a Teaching Assistant at LaGuardia Community College.
+After high school, while most of my peers started college, I was working full time to bring my family over from Bangladesh. What followed was over a decade of building myself from the ground up — cashier, restaurant industry, and eventually Finance Manager and Assistant General Manager at a dealership I helped grow from 15 to over 60 cars a month. When COVID-19 closed that chapter, I went back to school for Computer Science. Since then I have interned at the Air Force Research Laboratory, built a Tableau dashboard on food insecurity, earned a Data Analytics certificate, and am a Fellow in the AI Engineering track with Justice Through Code at Columbia University. What drives me is personal — growing up in Bangladesh and Queens, I've seen what it looks like when people lack access to resources and opportunity. I want to use technology to help close that gap.
 
 **7. Pages / sections included:**
 Single-page site with the following sections:
