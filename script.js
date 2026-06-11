@@ -87,18 +87,26 @@ form.addEventListener('submit', function (e) {
     isValid = false;
   }
 
-  // --- If all good, simulate a send ---
+  // --- If all good, send via Formspree ---
   if (isValid) {
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
 
-    // Wait 1 second then show success
-    setTimeout(function () {
-      successMsg.textContent = '✓ Message sent! I\'ll get back to you soon.';
-      form.reset();
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        successMsg.textContent = '✓ Message sent! I will get back to you soon.';
+        form.reset();
+      } else {
+        successMsg.textContent = 'Something went wrong. Please email me at KaziAnwar0112@gmail.com';
+        successMsg.style.color = '#d94f4f';
+      }
       submitBtn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
       submitBtn.disabled = false;
-    }, 1000);
+    });
   }
 });
 
