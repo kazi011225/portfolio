@@ -131,3 +131,92 @@ function clearError(fieldId) {
 function validEmail(email) {
   return email.indexOf('@') > 0 && email.indexOf('.') > 0;
 }
+
+
+// ---- 4. LIGHTBOX GALLERY ----
+// Clicking any gallery image opens a full-screen lightbox.
+// Left/right arrows (or keyboard) navigate between all images.
+// Clicking the X or pressing Escape closes it.
+
+var lightbox     = document.getElementById('lightbox');
+var lightboxImg  = document.getElementById('lightbox-img');
+var lightboxTag  = document.getElementById('lightbox-tag');
+var lightboxText = document.getElementById('lightbox-text');
+var lightboxCounter = document.getElementById('lightbox-counter');
+var currentIndex = 0;
+
+// Collect all gallery cards into an array
+var galleryCards = Array.from(document.querySelectorAll('.gallery-card'));
+
+// Build a data array from each card
+var galleryData = galleryCards.map(function(card) {
+  return {
+    src:     card.querySelector('img').src,
+    alt:     card.querySelector('img').alt,
+    tag:     card.querySelector('.gallery-tag').textContent,
+    caption: card.querySelector('.gallery-caption p').textContent
+  };
+});
+
+// Open lightbox when a card is clicked
+galleryCards.forEach(function(card) {
+  card.addEventListener('click', function() {
+    currentIndex = parseInt(card.getAttribute('data-index'));
+    showSlide(currentIndex);
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden'; // stop page scrolling
+  });
+});
+
+// Load the correct image and caption into the lightbox
+function showSlide(index) {
+  var data = galleryData[index];
+  lightboxImg.src  = data.src;
+  lightboxImg.alt  = data.alt;
+  lightboxTag.textContent  = data.tag;
+  lightboxText.textContent = data.caption;
+  lightboxCounter.textContent = (index + 1) + ' / ' + galleryData.length;
+}
+
+// Next image
+document.getElementById('lightbox-next').addEventListener('click', function() {
+  currentIndex = (currentIndex + 1) % galleryData.length;
+  showSlide(currentIndex);
+});
+
+// Previous image
+document.getElementById('lightbox-prev').addEventListener('click', function() {
+  currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+  showSlide(currentIndex);
+});
+
+// Close lightbox
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  document.body.style.overflow = ''; // restore scrolling
+}
+
+document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+
+// Also close when clicking the dark background (outside the image)
+lightbox.addEventListener('click', function(e) {
+  if (e.target === lightbox) {
+    closeLightbox();
+  }
+});
+
+// Keyboard support: arrow keys to navigate, Escape to close
+document.addEventListener('keydown', function(e) {
+  if (!lightbox.classList.contains('active')) return;
+  if (e.key === 'ArrowRight') {
+    currentIndex = (currentIndex + 1) % galleryData.length;
+    showSlide(currentIndex);
+  }
+  if (e.key === 'ArrowLeft') {
+    currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+    showSlide(currentIndex);
+  }
+  if (e.key === 'Escape') {
+    closeLightbox();
+  }
+});

@@ -534,16 +534,11 @@ h2 {
   max-width: 520px;
 }
 
-/* Masonry-style grid */
+/* Uniform 4-column grid */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-/* Wide card spans 2 columns */
-.gallery-card--wide {
-  grid-column: span 2;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
 }
 
 .gallery-card {
@@ -552,19 +547,16 @@ h2 {
   overflow: hidden;
   background-color: var(--dark);
   cursor: pointer;
+  aspect-ratio: 1 / 1;   /* every card is a perfect square */
 }
 
-/* Fixed height so all cards align */
+/* All images same size, same crop */
 .gallery-card img {
   width: 100%;
-  height: 260px;
+  height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.gallery-card--wide img {
-  height: 300px;
 }
 
 /* Caption slides up on hover */
@@ -573,10 +565,10 @@ h2 {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
-  padding: 2rem 1.25rem 1.25rem;
-  transform: translateY(60%);
-  transition: transform 0.35s ease;
+  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, transparent 100%);
+  padding: 2rem 1rem 0.85rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
 }
 
 .gallery-card:hover .gallery-caption {
@@ -584,24 +576,127 @@ h2 {
 }
 
 .gallery-card:hover img {
-  transform: scale(1.04);
-  opacity: 0.75;
+  transform: scale(1.06);
+  opacity: 0.7;
 }
 
 .gallery-tag {
   display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-size: 0.65rem;
+  font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .gallery-caption p {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #e8e8e8;
-  line-height: 1.5;
+  line-height: 1.45;
+}
+
+/* ---------- LIGHTBOX ---------- */
+.lightbox {
+  display: none;             /* hidden by default, JS shows it */
+  position: fixed;
+  inset: 0;                  /* covers the whole screen */
+  background-color: rgba(0, 0, 0, 0.93);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+/* JS adds this class to show it */
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 880px;
+  width: 90vw;
+  text-align: center;
+}
+
+/* The big image */
+.lightbox-content img {
+  max-height: 75vh;
+  width: 100%;
+  object-fit: contain;
+  border-radius: var(--radius);
+  display: block;
+}
+
+/* Caption below the image */
+.lightbox-caption {
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+.lightbox-caption p {
+  color: #cccccc;
+  font-size: 0.92rem;
+  margin-top: 0.3rem;
+}
+
+/* Close button top right */
+.lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
+}
+
+/* Prev / Next arrow buttons */
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #ffffff;
+  font-size: 2.5rem;
+  line-height: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.lightbox-prev { left: 1.5rem; }
+.lightbox-next { right: 1.5rem; }
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* Image counter e.g. "3 / 12" */
+.lightbox-counter {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #888888;
+  font-size: 0.8rem;
+  font-family: var(--font-sans);
 }
 
 
@@ -780,11 +875,7 @@ h2 {
   }
 
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gallery-card--wide {
-    grid-column: span 2;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -827,11 +918,7 @@ h2 {
   }
 
   .gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-card--wide {
-    grid-column: span 1;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .form-row {

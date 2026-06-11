@@ -315,63 +315,120 @@
           street culture. Here's what's on my mind when the laptop is closed.
         </p>
 
-        <!-- Image gallery grid -->
-        <div class="gallery">
+        <!-- Uniform image grid — click any to open lightbox -->
+        <div class="gallery" id="gallery">
 
-          <!-- Big feature card — museum photo -->
-          <div class="gallery-card gallery-card--wide">
-            <img src="photo.jpeg" alt="Kaz at a museum standing in front of a large pop art mural" />
-            <div class="gallery-caption">
-              <span class="gallery-tag">Art & Culture</span>
-              <p>Museums, street art, things that make you stop and think.</p>
-            </div>
-          </div>
-
-          <!-- Banksy -->
-          <div class="gallery-card">
-            <img src="banksy.jpeg" alt="Banksy street art showing a man with umbrella blocking colored rain while a child embraces it" />
+          <div class="gallery-card" data-index="0">
+            <img src="banksy.jpeg" alt="Banksy street art" />
             <div class="gallery-caption">
               <span class="gallery-tag">Street Art</span>
               <p>Banksy gets it. Art that lives on walls, not in galleries.</p>
             </div>
           </div>
 
-          <!-- Kubrick -->
-          <div class="gallery-card">
-            <img src="kubrick.jpeg" alt="Illustration of Stanley Kubrick surrounded by characters from his films" />
+          <div class="gallery-card" data-index="1">
+            <img src="eattherich.jpeg" alt="Eat the Rich mural" />
+            <div class="gallery-caption">
+              <span class="gallery-tag">Social Consciousness</span>
+              <p>Art that says what people are thinking but won't say out loud.</p>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-index="2">
+            <img src="thescream.jpeg" alt="The Scream by Edvard Munch" />
+            <div class="gallery-caption">
+              <span class="gallery-tag">Classic Art</span>
+              <p>The Scream. Still relevant. Maybe more than ever.</p>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-index="3">
+            <img src="inception.webp" alt="Scene from Inception" />
             <div class="gallery-caption">
               <span class="gallery-tag">Film</span>
-              <p>Kubrick, Nolan. Directors who treat the audience like they're smart.</p>
+              <p>Inception. The movie that made you question what's real.</p>
             </div>
           </div>
 
-          <!-- Khabib vs McGregor -->
-          <div class="gallery-card">
-            <img src="khabib.webp" alt="Khabib Nurmagomedov vs Conor McGregor in the UFC octagon" />
+          <div class="gallery-card" data-index="4">
+            <img src="interstellar.jpeg" alt="Scene from Interstellar" />
+            <div class="gallery-caption">
+              <span class="gallery-tag">Film</span>
+              <p>Interstellar. Nolan at his best. Science, emotion, and awe in one film.</p>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-index="5">
+            <img src="breakingbad.jpeg" alt="Walter White and Jesse Pinkman from Breaking Bad" />
+            <div class="gallery-caption">
+              <span class="gallery-tag">TV</span>
+              <p>Breaking Bad. The greatest character arc ever written. Period.</p>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-index="6">
+            <img src="matrix.jpeg" alt="Neo and Agent Smith in The Matrix" />
+            <div class="gallery-caption">
+              <span class="gallery-tag">Film</span>
+              <p>The Matrix. Changed how the world thinks about reality and code.</p>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-index="7">
+            <img src="jobs.jpeg" alt="Steve Jobs with an early Macintosh" />
+            <div class="gallery-caption">
+              <span class="gallery-tag">Inspiration</span>
+              <p>Jobs before the billions. Just a guy and a machine, building something new.</p>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-index="8">
+            <img src="space.jpeg" alt="Stephen Hawking in zero gravity" />
+            <div class="gallery-caption">
+              <span class="gallery-tag">Science</span>
+              <p>Hawking in zero gravity. Proof that nothing limits a curious mind.</p>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-index="9">
+            <img src="khabib.jpeg" alt="Khabib vs McGregor" />
             <div class="gallery-caption">
               <span class="gallery-tag">Combat Sports</span>
-              <p>One of the greatest fights ever made. Discipline over hype.</p>
+              <p>Khabib. Discipline, preparation, and dominance. No shortcuts.</p>
             </div>
           </div>
 
-          <!-- Zidane headbutt -->
-          <div class="gallery-card">
-            <img src="zidane.jpeg" alt="Zinedine Zidane headbutting Marco Materazzi in the 2006 World Cup Final" />
+          <div class="gallery-card" data-index="10">
+            <img src="lebron.jpeg" alt="LeBron James block in the NBA Finals" />
+            <div class="gallery-caption">
+              <span class="gallery-tag">Basketball</span>
+              <p>The block. Game 7. Cleveland. One of the greatest moments in sports history.</p>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-index="11">
+            <img src="zidane.webp" alt="Zidane headbutt in the 2006 World Cup Final" />
             <div class="gallery-caption">
               <span class="gallery-tag">Football</span>
               <p>Zidane. The most iconic moment in World Cup history. No notes.</p>
             </div>
           </div>
 
-          <!-- Eat the Rich -->
-          <div class="gallery-card gallery-card--wide">
-            <img src="eattherich.png" alt="Street mural showing wealth inequality next to a soup kitchen with a man holding a Feed the Poor sign" />
-            <div class="gallery-caption">
-              <span class="gallery-tag">Social Consciousness</span>
-              <p>I care about where the world is going. Art that says what people are thinking.</p>
+        </div>
+
+        <!-- Lightbox overlay -->
+        <div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer">
+          <button class="lightbox-close" id="lightbox-close" aria-label="Close">&#x2715;</button>
+          <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">&#8249;</button>
+          <button class="lightbox-next" id="lightbox-next" aria-label="Next">&#8250;</button>
+          <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img" />
+            <div class="lightbox-caption">
+              <span class="gallery-tag" id="lightbox-tag"></span>
+              <p id="lightbox-text"></p>
             </div>
           </div>
-
+          <div class="lightbox-counter" id="lightbox-counter"></div>
         </div>
       </div>
     </section>
