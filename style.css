@@ -147,9 +147,9 @@ h2 {
   transition: background 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Navbar becomes solid white on scroll — added by JS */
+/* Navbar becomes solid cream-2 on scroll — added by JS */
 #navbar.scrolled {
-  background-color: rgba(247, 244, 239, 0.96);
+  background-color: rgba(240, 235, 227, 0.97);
   backdrop-filter: blur(8px);
   box-shadow: 0 1px 0 var(--border);
 }
@@ -225,6 +225,7 @@ h2 {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 6rem 2.5rem 3rem;
+  background-color: var(--cream-2);
 }
 
 .hero-content {
